@@ -1,4 +1,4 @@
-# Adaptive Agent
+# Agentic Shell
 
 A small CLI agent that solves arbitrary natural-language tasks by writing and
 executing Python tools on the fly. When a generated tool turns out to be

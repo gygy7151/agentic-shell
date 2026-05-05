@@ -122,7 +122,13 @@ def execute_tool(name, args, confirm_cb, ask_cb, skills_dir, workspace):
             return _write_file(args["path"], args["content"], workspace)
         if name == "ask_user":
             answer = ask_cb(args["question"])
-            return answer or "(user gave no answer)"
+            if not answer:
+                return (
+                    "USER PROVIDED NO INPUT. Do not guess, fabricate, or proceed "
+                    "with a default. Stop and tell the user you cannot continue "
+                    "without a real answer to your question."
+                )
+            return answer
         if name == "save_skill":
             return _save_skill(
                 args["name"], args["when_to_use"], args["code"], skills_dir, confirm_cb

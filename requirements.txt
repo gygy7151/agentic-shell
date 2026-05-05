@@ -1,0 +1,3 @@
+# No third-party dependencies.
+# This agent uses only the Python standard library.
+# Python 3.10+ recommended.

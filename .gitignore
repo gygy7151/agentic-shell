@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+workspace/_run.py
+workspace/*.tmp
+.DS_Store
+.env
